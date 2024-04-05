@@ -1,0 +1,227 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body {
+    font-family: $font-family-main;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: $color-main;
+    overflow-x: hidden;
+
+    main{
+        overflow: hidden;
+    }
+}
+
+.btn {
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin:auto;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.8rem;
+    position: relative;
+    font-weight: 600;
+    border-radius: 25px;
+    width: 10rem;
+    overflow: hidden;
+    min-width: 150px;
+
+    @include media-breakpoint-up(md) {
+        width: auto;
+    }
+
+    span {
+        position: relative;
+        z-index: 10;
+    }
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease;
+        background-color: $color-blue-dark;
+        z-index: 9;
+    }
+    
+    &.btn-primary {
+        background: $color-blue-main;
+        &:hover {
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+
+    &.btn-whatsapp {
+        background-color: $color-whatsapp;
+        border-radius: 2.5rem;
+        overflow: hidden;
+        color: #fff !important;
+        &:after {
+            background-color: #009688;
+        }
+        &:hover {
+            &:after {
+                width: 100%;
+            }
+        }
+        i {
+            margin-right: .7rem;
+            font-size: 2rem;
+            transform: translateY(2px);
+        }
+    }
+}
+
+
+a {
+    transition: all 0.3s ease;
+    color: $color-blue-main;
+    &:hover {
+        color: $color-blue-dark;
+    }
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    /* .row > * {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    } */
+}
+
+strong {
+    font-weight: 700;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+sup {
+    top: -0.3em;
+}
+
+
+h1,
+h2 {
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
+}
+
+h1 {
+    font-size: 3.3rem;
+    color: #fff;
+    @include media-breakpoint-up(md) {
+        font-size: 5.6rem;
+    }
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    @include media-breakpoint-up(md) {
+        font-size: 3.5rem;
+    }
+}
+
+h3{
+    padding: 5px 0px;
+    font-size: 2rem;
+
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    transition: width 0.5s linear;
+    z-index: 1000;
+    background-color: $color-blue-main;
+    width: 100%;
+    span {
+        // background-color: #4CAF50;
+        background-color: $color-sales;
+        display: block;
+        width: 0;
+        height: 100%;
+    }
+}
+
+.lg-sub-html p {
+    font-size: 1.5rem;
+}
+
+/*ANIMATIONS
+********************************************/
+  @keyframes bounce-in-top {
+    0% {
+        transform: translateY(-500px);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    38% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    55% {
+        transform: translateY(-65px);
+        animation-timing-function: ease-in;
+    }
+    72% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+    81% {
+        transform: translateY(-28px);
+        animation-timing-function: ease-in;
+    }
+    90% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+    95% {
+        transform: translateY(-8px);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+  }
+
+
+ @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+}
+  
+  
+  
