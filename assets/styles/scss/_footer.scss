@@ -1,123 +1,84 @@
 footer {
     position: relative;
 
-    .masInfo {
+    .footer_datos {
         display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: $color-blue-dark;
-        padding: 5rem 0;
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+        }
 
-        .masInfo__datos {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .datos_oficina {
+            margin: 1rem;
             text-align: center;
-            color: white;
 
-            .masInfo__datos--titulo {
-                font-size: 2.1rem;
-                font-weight: bold;
-                margin: 0rem 0.3rem;
-                @include media-breakpoint-up(md) {
-                    font-size: 2.5rem;
+            @include media-breakpoint-up(md) {
+                width: 45%;
+            }
+                      
+            .datos_oficina_redes {
+                font-size: 2rem;
+                margin-top: 1.5rem;
 
-                }
-                @include media-breakpoint-up(lg) {
-                    font-size: 3.1rem;
+                &>a {
+                    margin: 0 .55rem;
 
+                    span {
+                        color: rgba(0, 0, 0, 0.85);
+                        transition: all .3s ease-in;
+                    }
+
+                    span:hover {
+                        color: green;
+                        transform: scale(1.3);
+                        transition: all .3s;
+                    }
                 }
             }
+        }
+    
 
-            .masInfo__datos--text {
-                margin-bottom: 2rem;
-                margin-right: 0.3rem;
-                margin-left: 0.3rem;
-
-                @include media-breakpoint-up(md) {
-                    font-size: 1.9rem;
-
-                }
-
-                @include media-breakpoint-up(lg) {
-                    font-size: 2.1rem;
-
-                }
-
-            }
-
-            .masInfo__datos--Whatsapp {
-                font-size: 1.6rem;
-                background-color: $color-whatsapp;
-                border-radius: 22px;
-                border-style: none;
-                color: white;
-                padding: 0.7rem 2.5rem;
-                transition: all 0.3s ease;
-                &:hover {
-                    background-color: #009688;
-                }
-
-                @include media-breakpoint-up(md) {
-                    font-size: 1.9rem;
-
-                }
-
+        .datos_map {
+            padding: 2rem 0;
+            width: 100%;
+            @include media-breakpoint-up(lg) {
+                width: 60%;
             }
         }
     }
 
-    .logo-footer {
-        margin-top: 4rem;
-    }
-
-    .social-links {
-        list-style: none;
+    .footer__redes {
         display: flex;
-        align-items: center;
+        flex-flow: row nowrap;
         justify-content: center;
-        margin: 3rem 0;
+        align-items: center;
+        width: 100%;
+        height: 6rem;
+        gap: .5rem;
+        padding: 0rem;
+        background-color: rgb(209, 227, 241);
+        color: rgb(77, 67, 10);
+        font-size: 2.2rem;
 
-        li {
-            margin-right: .6rem;
-
-            &:last-child {
-                margin: 0;
-            }
-
-            a {
-                width: 4rem;
-                height: 4rem;
-                line-height: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: $color-blue-main;
-                color: #fff;
-                border-radius: 50%;
-                text-decoration: none;
-                &:hover {
-                    background-color: $color-blue-light;
-                    transform: translateY(-0.5rem);
-                }
-
-                i {
-                    font-size: 2.4rem;
-                }
-            }
+        @include media-breakpoint-up(md) {
+            gap: 2rem;
         }
+
     }
 
-
-    .matriculado {
-        text-align: center;
-    }
-
-    .copyright {
-        text-align: center;
+    .footer-bottom {
+        background-color: #263bc5;
+        color: #fff;
         font-size: 1.5rem;
-        padding: 0.5rem 0;
+        text-align: center;
+        padding: 1.5rem 0;
+        position: relative;
+        p {
+            margin: 0;
+        }
     }
 
     .footer-widget {
