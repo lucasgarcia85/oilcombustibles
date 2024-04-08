@@ -11,7 +11,7 @@ header {
     &.sticky {
         // box-shadow: 0px 0px 6px #333;
         // background: rgb(0, 0, 0, 92%);
-        background-color: $color-blue-main;
+        background-color: $color-main;
         transition: all 1s;
         position: fixed;
         z-index: 999;
@@ -30,7 +30,7 @@ header {
                 
         @include media-breakpoint-up(lg){
             background: rgb(255,255,255);
-            background: linear-gradient(90deg, rgba(255,255,255,1) 31%, rgba(33,124,219,1) 61%, rgba(12,50,91,1) 100%);
+            background: linear-gradient(90deg, rgba(255,255,255,1) 31%, $color-main 61%, $color-blue-dark 100%);
             
         }
       

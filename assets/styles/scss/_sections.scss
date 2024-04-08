@@ -24,24 +24,18 @@
     background-repeat: no-repeat;
     background-position: 7% 50%;
    
-    padding-top: 11rem;
         @include media-breakpoint-up(sm){
            
             background-position: center;
-            height: auto;
+           
         }
         @include media-breakpoint-up(lg){
             padding-top: 5rem;
             background-position: center 25%;
-            height: 80vh;
+            
         }
 
-    .container {
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
-        
+           
         .hero_titulo {
             display: flex;
             flex-direction: column;
@@ -49,8 +43,23 @@
             justify-content: center;
             text-align: center;
             text-shadow: 3px 4px 2px rgba(0, 0, 0, 0.59);
-           
             color: rgb(255, 255, 255);
+            height: 65vh;
+            padding-top: 7rem;
+
+            @include media-breakpoint-up(md){
+                height: 70vh;
+                padding-top:8rem;
+                
+                
+            }
+
+            @include media-breakpoint-up(lg){
+                height: 80vh;
+                padding-top:12rem;
+                
+                
+            }
     
                 
             h1{
@@ -67,10 +76,10 @@
                 margin-top: 5rem;
                 text-align: center;
             }
-        }
+        
 
         
-    }
+        }
 
 
         
@@ -136,10 +145,10 @@
             div{
 
                 &:nth-child(odd){
-                    background-color: rgba(29, 43, 202, 0.8);
+                    background-color: $color-main;
                 }
                 &:nth-child(even){
-                    background-color: rgba(45, 201, 31, 0.8);
+                    background-color: $color-green;
                 }
                     
                 
@@ -186,7 +195,7 @@
     }
 
     h1 {
-        color: $color-blue-main;
+        color: $color-main;
     }
 
 

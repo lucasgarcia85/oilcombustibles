@@ -12416,7 +12416,6 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
-  color: #333;
   overflow-x: hidden;
 }
 body main {
@@ -12463,7 +12462,7 @@ body main {
   z-index: 9;
 }
 .btn.btn-primary {
-  background: #20396f;
+  background: #0170C1;
 }
 .btn.btn-primary:hover:after {
   width: 100%;
@@ -12488,7 +12487,7 @@ body main {
 
 a {
   transition: all 0.3s ease;
-  color: #20396f;
+  color: #0170C1;
 }
 a:hover {
   color: #24314f;
@@ -12720,7 +12719,7 @@ footer .back-to-top {
   bottom: 2.2rem;
   transition: all 0.3s ease-in-out;
   background-color: #fff;
-  border: 2px solid #20396f;
+  border: 2px solid #0170C1;
   width: 4rem;
   height: 4rem;
   display: grid;
@@ -12731,8 +12730,8 @@ footer .back-to-top {
 }
 @media (min-width: 992px) {
   footer .back-to-top:hover {
-    background-color: #4764a3;
-    border-color: #4764a3;
+    background-color: #0170C1;
+    border-color: #24314f;
   }
   footer .back-to-top:hover i {
     color: #fff;
@@ -12740,7 +12739,7 @@ footer .back-to-top {
 }
 footer .back-to-top i {
   font-size: 2.2rem;
-  color: #20396f;
+  color: #0170C1;
   transition: all 0.3s ease;
 }
 
@@ -12752,7 +12751,7 @@ footer .back-to-top i {
   }
 }
 header.sticky {
-  background-color: #20396f;
+  background-color: #0170C1;
   transition: all 1s;
   position: fixed;
   z-index: 999;
@@ -12767,7 +12766,7 @@ header .navbar {
 @media (min-width: 992px) {
   header .navbar {
     background: rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgb(255, 255, 255) 31%, rgb(33, 124, 219) 61%, rgb(12, 50, 91) 100%);
+    background: linear-gradient(90deg, rgb(255, 255, 255) 31%, #0170C1 61%, #24314f 100%);
   }
 }
 header .navbar-toggler {
@@ -12878,22 +12877,19 @@ header .navbar-brand img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 7% 50%;
-  padding-top: 11rem;
 }
 @media (min-width: 576px) {
   .hero {
     background-position: center;
-    height: auto;
   }
 }
 @media (min-width: 992px) {
   .hero {
     padding-top: 5rem;
     background-position: center 25%;
-    height: 80vh;
   }
 }
-.hero .container .hero_titulo {
+.hero .hero_titulo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12901,14 +12897,28 @@ header .navbar-brand img {
   text-align: center;
   text-shadow: 3px 4px 2px rgba(0, 0, 0, 0.59);
   color: rgb(255, 255, 255);
+  height: 65vh;
+  padding-top: 7rem;
 }
-.hero .container .hero_titulo h1, .hero .container .hero_titulo .h1 {
+@media (min-width: 768px) {
+  .hero .hero_titulo {
+    height: 70vh;
+    padding-top: 8rem;
+  }
+}
+@media (min-width: 992px) {
+  .hero .hero_titulo {
+    height: 80vh;
+    padding-top: 12rem;
+  }
+}
+.hero .hero_titulo h1, .hero .hero_titulo .h1 {
   text-transform: uppercase;
 }
-.hero .container .hero_titulo h2, .hero .container .hero_titulo .h2 {
+.hero .hero_titulo h2, .hero .hero_titulo .h2 {
   margin-top: 2rem;
 }
-.hero .container .hero_titulo button {
+.hero .hero_titulo button {
   margin-top: 5rem;
   text-align: center;
 }
@@ -12944,10 +12954,10 @@ header .navbar-brand img {
   height: 14rem;
 }
 .servicios .container .valores div:nth-child(odd) {
-  background-color: rgba(29, 43, 202, 0.8);
+  background-color: #0170C1;
 }
 .servicios .container .valores div:nth-child(even) {
-  background-color: rgba(45, 201, 31, 0.8);
+  background-color: #00AF50;
 }
 @media (min-width: 992px) {
   .servicios .container .valores div {
@@ -12972,7 +12982,7 @@ header .navbar-brand img {
   margin-top: 2rem;
 }
 .thank-you h1, .thank-you .h1 {
-  color: #20396f;
+  color: #0170C1;
 }
 
 /*# sourceMappingURL=main.css.map */

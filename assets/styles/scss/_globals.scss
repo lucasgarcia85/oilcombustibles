@@ -7,7 +7,7 @@ body {
     font-family: $font-family-main;
     font-size: 1.6rem;
     line-height: 1.5;
-    color: $color-main;
+    
     overflow-x: hidden;
 
     main{
@@ -55,7 +55,7 @@ body {
     }
     
     &.btn-primary {
-        background: $color-blue-main;
+        background: $color-main;
         &:hover {
             &:after {
                 width: 100%;
@@ -87,7 +87,7 @@ body {
 
 a {
     transition: all 0.3s ease;
-    color: $color-blue-main;
+    color: $color-main;
     &:hover {
         color: $color-blue-dark;
     }
