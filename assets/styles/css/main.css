@@ -12759,7 +12759,7 @@ header.sticky {
   width: 100%;
 }
 header.sticky .navbar-brand img {
-  width: 100px;
+  width: 80px;
 }
 header .navbar {
   background: rgb(255, 255, 255);
@@ -12848,7 +12848,7 @@ header .navbar .navbar-collapse .nav-item .nav-link:hover:after {
   }
 }
 header .navbar-brand img {
-  width: 126px;
+  width: 90px;
   height: auto;
   transition: all 0.3s ease;
 }
