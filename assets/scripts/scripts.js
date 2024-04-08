@@ -5,6 +5,34 @@ window.addEventListener('scroll', function () {
   header.classList.toggle("sticky", window.scrollY > 0);
 });
 
+// Swiper config
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false
+  // },
+  effect: "fade",
+  speed: 1000,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
 
 /*Update copy automatically
 **************************************************/

@@ -12,6 +12,8 @@
   <link href="assets/images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
   <link rel="stylesheet" href="assets/styles/css/main.css">
@@ -55,8 +57,31 @@
 
 
   <main id="main">
+
+    <!-- Slider main container -->
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide slide-01">
+      <div class="swiper-slide--content">
+        <h1>Grupo Oil Combustibles</h1>
+        <h2>Estaciones Gulf & Dapsa</h2>
+        <h3>San Nicolas de los Arroyos, Provincia de Buenos Aires</h3>
+      </div>
+    </div>
+    <div class="swiper-slide slide-02">
+      <div class="swiper-slide--content">
+        <h2>Combustibles y Lubricantes</h2>
+        <h3>Atención personalizada, solicitá tu presupuesto sin cargo.</h3>
+        <a href="#comunicateConAsesor" target="_blank" class="btn btn-primary"><span> ¡Consultanos!</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
     
-    <section class="hero">
+    <!-- <section class="hero">
      
       <div class="hero_titulo">
         <h1>Grupo Oil Combustibles</h1>
@@ -67,14 +92,14 @@
           
       </div> 
        
-    </section>  
+    </section>   -->
     
     <section class="servicios" id="servicios">
       <div class="container">
 
         <div class="valores">
-          <div>Servicio de Calidad con Excelentes precios y condiciones</div>
-          <div>Brindamos Atención Personalizada</div>
+          <div>Servicio de Calidad con excelentes precios y condiciones</div>
+          <div>Mayorista y Minorista</div>
           <div>Apertura de Cuentas Corrientes para Empresas</div>
           <div>Ofrecemos Financiación</div>
           
@@ -166,6 +191,8 @@
   
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <script src="assets/scripts/scripts.js"></script>
   
   <!-- SCRIPTS: End -->
