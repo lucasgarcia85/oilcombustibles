@@ -12533,11 +12533,12 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 2.5rem;
+  text-align: center;
+  font-size: 3rem;
 }
 @media (min-width: 768px) {
   h2, .h2 {
-    font-size: 4.2rem;
+    font-size: 4.4rem;
   }
 }
 
@@ -12758,7 +12759,7 @@ header.sticky {
   width: 100%;
 }
 header.sticky .navbar-brand img {
-  width: 80px;
+  width: 60px;
 }
 header .navbar {
   background: rgb(255, 255, 255);
@@ -12847,7 +12848,7 @@ header .navbar .navbar-collapse .nav-item .nav-link:hover:after {
   }
 }
 header .navbar-brand img {
-  width: 90px;
+  width: 75px;
   height: auto;
   transition: all 0.3s ease;
 }
@@ -12922,13 +12923,13 @@ header .navbar-brand img {
   }
 }
 .swiper .swiper-slide--content h2, .swiper .swiper-slide--content .h2 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   text-align: center;
 }
 @media (min-width: 1200px) {
   .swiper .swiper-slide--content h2, .swiper .swiper-slide--content .h2 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 .swiper .swiper-slide--content h3, .swiper .swiper-slide--content .h3 {
@@ -13000,7 +13001,11 @@ header .navbar-brand img {
 .servicios {
   margin-top: 5rem;
 }
+.servicios .container h2, .servicios .container .h2 {
+  text-shadow: 1px 2px 1px #0170C1;
+}
 .servicios .container .valores {
+  margin-top: 6rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -13013,6 +13018,8 @@ header .navbar-brand img {
   }
 }
 .servicios .container .valores div {
+  opacity: 0.9;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13020,7 +13027,7 @@ header .navbar-brand img {
   color: #ffffff;
   padding: 3rem;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2.3rem;
   line-height: 1.3;
   height: 14rem;
 }
@@ -13028,7 +13035,6 @@ header .navbar-brand img {
   background-color: #0170C1;
 }
 .servicios .container .valores div:nth-child(even) {
-  transform: translateY(3rem);
   background-color: #00AF50;
 }
 @media (min-width: 992px) {
@@ -13040,6 +13046,49 @@ header .navbar-brand img {
 
 .estaciones {
   margin-top: 5rem;
+}
+.estaciones .container {
+  text-align: center;
+}
+.estaciones .container h2, .estaciones .container .h2 {
+  text-shadow: 1px 2px 1px #0170C1;
+}
+.estaciones .container .tarjetas {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+@media (min-width: 992px) {
+  .estaciones .container .tarjetas {
+    margin-top: 5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5rem;
+    align-items: baseline;
+  }
+}
+.estaciones .container .tarjetas .tarjetas_info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.estaciones .container .tarjetas .tarjetas_info h3, .estaciones .container .tarjetas .tarjetas_info .h3 {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.estaciones .container .tarjetas .tarjetas_info p a {
+  color: #0170C1;
+}
+.estaciones .container .tarjetas .tarjetas_info img {
+  width: 35%;
+  border-radius: 50%;
+}
+@media (min-width: 576px) {
+  .estaciones .container .tarjetas .tarjetas_info img {
+    width: 40%;
+    margin-bottom: 2.5rem;
+  }
 }
 
 /*THANK YOU
