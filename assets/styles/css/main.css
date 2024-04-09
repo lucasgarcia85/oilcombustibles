@@ -13072,14 +13072,6 @@ header .navbar-brand img {
   text-align: center;
   margin-bottom: 2rem;
 }
-.estaciones .container .tarjetas .tarjetas_info h3, .estaciones .container .tarjetas .tarjetas_info .h3 {
-  color: #000;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-.estaciones .container .tarjetas .tarjetas_info p a {
-  color: #0170C1;
-}
 .estaciones .container .tarjetas .tarjetas_info img {
   width: 35%;
   border-radius: 50%;
@@ -13089,6 +13081,19 @@ header .navbar-brand img {
     width: 40%;
     margin-bottom: 2.5rem;
   }
+}
+.estaciones .container .tarjetas .tarjetas_info h3, .estaciones .container .tarjetas .tarjetas_info .h3 {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.estaciones .container .tarjetas .tarjetas_info a {
+  text-decoration: none;
+  color: #0170C1;
+}
+.estaciones .container .tarjetas .tarjetas_info a img {
+  width: 2rem;
+  margin-right: 1rem;
 }
 
 /*THANK YOU
