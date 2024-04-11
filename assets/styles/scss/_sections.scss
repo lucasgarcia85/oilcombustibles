@@ -17,7 +17,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(sm) {
             height: 600px;
         }
 
@@ -93,44 +93,44 @@
         }
     }
 
-    &-button-prev,
-    &-button-next {
-        color: #fff;
-        background-color: rgba($color: #fff, $alpha: 0.2);
-        width: 8rem;
-        height: 8rem;
-        border-radius: 100%;
-        display: grid;
-        place-items: center;
-        top: 50%;
-        transform: translateY(-50%);
-        // &:hover {
-        //     &:after {
-        //         //color: $color-blue-light;
-        //     }
-        // }
-        &:after {
-            transition: all 0.3s ease;
-            font-size: 2.6rem;
-        }
+    // &-button-prev,
+    // &-button-next {
+    //     color: #fff;
+    //     background-color: rgba($color: #fff, $alpha: 0.2);
+    //     width: 8rem;
+    //     height: 8rem;
+    //     border-radius: 100%;
+    //     display: grid;
+    //     place-items: center;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     // &:hover {
+    //     //     &:after {
+    //     //         //color: $color-blue-light;
+    //     //     }
+    //     // }
+    //     &:after {
+    //         transition: all 0.3s ease;
+    //         font-size: 2.6rem;
+    //     }
 
-        @include media-breakpoint-down(lg) {
-            display: none;
-        }
-    }
+    //     @include media-breakpoint-down(lg) {
+    //         display: none;
+    //     }
+    // }
 
-    &-button-prev {
-        left: -4rem;
-        &:after {
-            transform: translateX(1.2rem);
-        }
-    }
-    &-button-next {
-        right: -4rem;
-        &:after {
-            transform: translateX(-1.2rem);
-        }
-    }
+    // &-button-prev {
+    //     left: -4rem;
+    //     &:after {
+    //         transform: translateX(1.2rem);
+    //     }
+    // }
+    // &-button-next {
+    //     right: -4rem;
+    //     &:after {
+    //         transform: translateX(-1.2rem);
+    //     }
+    // }
 
     &-pagination-bullets {
         bottom: 2rem !important;
@@ -243,10 +243,7 @@
     
     .container{
         
-       h2{
-            
-            text-shadow: 1px 2px 1px $color-main;
-        }
+      
        
     
         .valores{
@@ -265,8 +262,29 @@
 
 
             div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                border-radius: 1.5rem;
+                color: #ffffff;
+                padding: 3rem;
+                text-align: center;
+               
+                line-height: 1.3;
+                height: 22rem;
+                // transform: translateY(-10rem);
                 opacity: 0.9;
-                text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.9);
+                // text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.9);
+                
+
+                @include media-breakpoint-up(lg) {
+                    height: inherit;
+                    justify-content: flex-start;
+                    gap: 3rem;
+                    width: 22%;
+                }
 
                 &:nth-child(odd){
                     
@@ -277,25 +295,27 @@
                    
                     background-color: $color-green;
                 }
-                    
-                
-                
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 1.5rem;
-                color: #ffffff;
-                padding: 3rem;
-                text-align: center;
-                font-size: 2.3rem;
-                line-height: 1.3;
-                height: 14rem;
-                // transform: translateY(-10rem);
 
-                @include media-breakpoint-up(lg) {
-                    height: inherit;
-                    width: -webkit-fill-available;
+
+                p{
+                    font-size: 2.1rem;
+                    @include media-breakpoint-up(md) {
+                        font-size: 2.4rem;
+                     }
+
                 }
+
+                img{
+                    width: 60px;
+
+                    @include media-breakpoint-up(md) {
+                       width: 70px;
+                    }
+
+                    
+                    
+                }
+
             }
         }
     }
@@ -307,10 +327,7 @@
     .container{
         text-align: center;
 
-        h2{
-           
-            text-shadow: 1px 2px 1px $color-main;
-        }
+       
         
 
         .tarjetas {

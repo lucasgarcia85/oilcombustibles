@@ -1,6 +1,6 @@
 header {
-        
     
+       
     @include media-breakpoint-down(lg) {
     position: fixed;
     z-index: 12;
@@ -19,7 +19,8 @@ header {
 
         .navbar-brand {
             img {
-                width: 60px;
+                
+                width: 80px;
             }
         }
     }
@@ -27,9 +28,10 @@ header {
     .navbar{
 
         background: rgb(255,255,255);
-                
+        padding: 0;
+                        
         @include media-breakpoint-up(lg){
-            background: rgb(255,255,255);
+           
             background: linear-gradient(90deg, rgba(255,255,255,1) 31%, $color-main 61%, $color-blue-dark 100%);
             
         }
@@ -125,52 +127,6 @@ header {
                     }
                 }
 
-                // &.contact-us {
-                //     background-color: $color-sales;
-                //     padding: .2rem 1.8rem;
-                //     display: flex;
-                //     flex-wrap: nowrap;
-                //     align-items: center;
-                //     border-radius: 2rem;
-                //     width: fit-content;
-                //     transition: all 0.3s ease;
-                //     position: relative;
-                //     overflow: hidden;
-                //     @include media-breakpoint-down(lg) {
-                //         margin-top: 2rem;
-                //     }
-                    
-                //     &:hover {
-                //         &:after {
-                //             width: 100%;
-                //         }
-                //     }
-
-                //     &:after {
-                //         content: '';
-                //         display: inline-block;
-                //         width: 0;
-                //         height: 100%;
-                //         position: absolute;
-                //         left: 0;
-                //         transition: all 0.3s ease;
-                //         background-color: #e62d2d;
-                //         z-index: 9;
-                //     }
-
-                //     a {
-                //         animation: shake 1.5s infinite;
-                //         font-weight: 400;
-                //         position: relative;
-                //         z-index: 10;
-                //         &:after {
-                //             display: none;
-                //         }
-                //     }
-                //     i {
-                //         margin-right: .5rem;
-                //     }
-                // }
             }
         }
       
@@ -178,13 +134,51 @@ header {
 
     .navbar-brand {
         img {
-            width: 75px;
+            width: 80px;
             height: auto;
             transition: all 0.3s ease;
+            
+
+            @include media-breakpoint-up(sm) {
+                width: 95px;
+                transform: translateY(-14px);
+            }
+
+
         }
     }
 
 
+
+}
+.consulta-bar {
+    display: none;
+
+    @include media-breakpoint-up(sm) {
+        color: rgb(89, 89, 89);
+        font-size: 1.5rem;
+        display: flex;
+        gap: 2rem;
+        justify-content: end;
+        align-items: center;
+        width: 100%;
+        background: linear-gradient(90deg, rgb(255, 255, 255) 1%, $color-gray 50%, $color-gray-2 100%);
+        text-align: center; 
+    }
+   
+    p{
+        margin: 0;
+        padding: 0;
+    }
+    .consultar-link {
+    
+    background-color: $color-green;
+    color: white; 
+    padding: 2px 15px; 
+    cursor: pointer; 
+    text-decoration: none;
+   
+    }
 
 }
 
