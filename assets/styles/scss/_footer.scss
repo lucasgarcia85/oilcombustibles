@@ -70,7 +70,7 @@ footer {
     }
 
     .footer-bottom {
-        background-color: #263bc5;
+        background-color: $color-main;
         color: #fff;
         font-size: 1.5rem;
         text-align: center;
@@ -134,10 +134,10 @@ footer {
         z-index: 11;
         @include media-breakpoint-up(lg) {
             &:hover {
-                background-color: $color-main;
+                background-color: $color-green;
                 border-color: $color-blue-dark;
                 i {
-                    color: #fff;
+                    color: white;
                 }
             }
         }
