@@ -20,7 +20,7 @@ header {
         .navbar-brand {
             img {
                 
-                width: 55px;
+                width: 62px;
 
                 @include media-breakpoint-up(lg){
                     width: 65px;
@@ -157,18 +157,24 @@ header {
 
 }
 .consulta-bar {
-    display: none;
 
-    @include media-breakpoint-up(sm) {
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        color: rgb(89, 89, 89);
-        font-size: 1.5rem;
-        gap: 2rem;
-        width: 100%;
-        background: linear-gradient(90deg, rgb(255, 255, 255) 1%, $color-gray 50%, $color-gray-2 100%);
-        text-align: center; 
+    background: linear-gradient(90deg, rgb(255, 255, 255) 1%, $color-gray 50%, $color-gray-2 100%);
+
+    >.container{
+        display: none;
+    
+        @include media-breakpoint-up(sm) {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            color: rgb(89, 89, 89);
+            font-size: 1.5rem;
+            gap: 2rem;
+            width: 100%;
+           
+            text-align: center; 
+        }
+
     }
    
     p{
@@ -186,6 +192,13 @@ header {
     }
 
 }
+
+// .hide{
+//     opacity: 0;
+//   max-height: 0;
+//   transition: opacity 0.3s, max-height 0.3s ease-out;
+// }
+
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon #S1{
     transform: rotate(45deg) translateY(7px);
