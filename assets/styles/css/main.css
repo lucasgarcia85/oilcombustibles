@@ -12759,15 +12759,20 @@ header.sticky {
   width: 100%;
 }
 header.sticky .navbar-brand img {
-  width: 65px;
+  width: 55px;
+}
+@media (min-width: 992px) {
+  header.sticky .navbar-brand img {
+    width: 65px;
+  }
 }
 header .navbar {
   background: rgb(255, 255, 255);
-  padding: 0;
 }
 @media (min-width: 992px) {
   header .navbar {
     background: linear-gradient(90deg, rgb(255, 255, 255) 31%, #0170C1 61%, #24314f 100%);
+    padding: 0;
   }
 }
 header .navbar-toggler {
@@ -12848,13 +12853,13 @@ header .navbar .navbar-collapse .nav-item .nav-link:hover:after {
   }
 }
 header .navbar-brand img {
-  width: 70px;
+  width: 65px;
   height: auto;
   transition: all 0.3s ease;
 }
 @media (min-width: 576px) {
   header .navbar-brand img {
-    width: 85px;
+    width: 80px;
     transform: translateY(-14px);
   }
 }
