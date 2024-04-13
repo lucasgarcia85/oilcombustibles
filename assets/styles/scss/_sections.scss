@@ -15,10 +15,11 @@
         justify-content: center;
         position: relative;
         background-size: cover;
-        background-position: center;
+        background-position: 15% center;
         background-repeat: no-repeat;
         @include media-breakpoint-up(sm) {
             height: 600px;
+            background-position: center;
         }
 
         &:after {
@@ -27,12 +28,13 @@
             position: absolute;
             height: 100%;
             width: 100%;
-            background-color: rgba($color: #000000, $alpha: 0.6);
+            background-color: rgba($color: #000000, $alpha: 0.7);
             z-index: 1;
         }
 
         &--content {
             position: relative;
+            padding-top: 6rem;
             z-index: 2;
             display: flex;
             align-items: center;
@@ -44,26 +46,27 @@
             color: rgb(255, 255, 255);
             @include media-breakpoint-up(lg) {
                 max-width: 80%;
+                padding-top: 0rem;
             }
 
             h1 {
                 
-                font-size: 4.5rem;
+                font-size: 4.2rem;
                 margin-bottom: 1rem;
                 text-align: center;
                 @include media-breakpoint-up(xl) {
-                    font-size: 6.5rem;
+                    font-size: 7rem;
                 }
                             
             }
 
             h2 {
                 
-                font-size: 3rem;
+                font-size: 3.2rem;
                 margin-bottom: 1rem;
                 text-align: center;
                 @include media-breakpoint-up(xl) {
-                    font-size: 4rem;
+                    font-size: 4.5rem;
                 }
                             
             }
@@ -74,7 +77,7 @@
                 margin-bottom: 1rem;
                 text-align: center;
                 @include media-breakpoint-up(xl) {
-                    font-size: 3.2rem;
+                    font-size: 3.3rem;
                 }
             }
 
