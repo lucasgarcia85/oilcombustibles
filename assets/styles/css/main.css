@@ -13051,46 +13051,61 @@ header .navbar-brand img {
 }
 .estaciones .container {
   text-align: center;
-}
-.estaciones .container .tarjetas {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  align-items: center;
   margin-top: 4rem;
 }
-@media (min-width: 992px) {
-  .estaciones .container .tarjetas {
-    margin-top: 5rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 5rem;
-    align-items: baseline;
-  }
-}
-.estaciones .container .tarjetas .tarjetas_info {
-  text-align: center;
+.estaciones .container .estacion {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   margin-bottom: 2rem;
-}
-.estaciones .container .tarjetas .tarjetas_info img {
-  width: 35%;
-  border-radius: 50%;
+  gap: 3rem;
 }
 @media (min-width: 576px) {
-  .estaciones .container .tarjetas .tarjetas_info img {
-    width: 40%;
+  .estaciones .container .estacion {
+    flex-direction: row;
+  }
+}
+.estaciones .container .estacion .estacion_ubicacion {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .estaciones .container .estacion .estacion_ubicacion {
+    width: 50%;
+  }
+}
+.estaciones .container .estacion .estacion_ubicacion iframe {
+  width: 100%;
+}
+.estaciones .container .estacion .estacion_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 576px) {
+  .estaciones .container .estacion .estacion_info {
+    width: 50%;
+  }
+}
+.estaciones .container .estacion .estacion_info img {
+  width: 50px;
+}
+@media (min-width: 576px) {
+  .estaciones .container .estacion .estacion_info img {
+    width: 80px;
     margin-bottom: 2.5rem;
   }
 }
-.estaciones .container .tarjetas .tarjetas_info h3, .estaciones .container .tarjetas .tarjetas_info .h3 {
+.estaciones .container .estacion .estacion_info h3, .estaciones .container .estacion .estacion_info .h3 {
   color: #000;
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
-.estaciones .container .tarjetas .tarjetas_info a {
+.estaciones .container .estacion .estacion_info a {
   text-decoration: none;
   color: #0170C1;
 }
-.estaciones .container .tarjetas .tarjetas_info a img {
+.estaciones .container .estacion .estacion_info a img {
   width: 2rem;
   margin-right: 1rem;
 }

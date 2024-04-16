@@ -329,68 +329,89 @@
     margin-top: 5rem;
 
     .container{
-        text-align: center;
-
-       
         
-
-        .tarjetas {
-            display: grid;
-            grid-template-columns: 1fr;
-            justify-content: center;
-            align-items: center;
-            margin-top: 4rem;
-            
-            @include media-breakpoint-up(lg) {
-                margin-top: 5rem;
-                grid-template-columns: 1fr 1fr 1fr;
-                column-gap: 5rem;
-                align-items: baseline;
-            }
-    
-    
-            .tarjetas_info {
-                text-align: center;
+        text-align: center;
+        margin-top: 4rem;
+           
+            .estacion{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
                 margin-bottom: 2rem;
-    
-                img {
-                    width: 35%;
-                    border-radius: 50%;
-                   
-    
-                    @include media-breakpoint-up(sm) {
-                        width: 40%;
-                        margin-bottom: 2.5rem;
-                    }
-                }
+                gap: 3rem;
 
-                h3 {
-                    color: #000;
-                    font-weight: 700;
-                    margin-bottom: 1.5rem;
+                @include media-breakpoint-up(sm) {
+                    flex-direction: row;
+                    
+                 }
+                
+                .estacion_ubicacion{
+                   width: 100%;
+
+                    @include media-breakpoint-up(sm) {
+                        width: 50%;
+                        
+                     }
+
+                    iframe{
+                        width: 100%;
+                    }
+    
                 }
+                .estacion_info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                                       
+
+                    @include media-breakpoint-up(sm) {
+                        width: 50%;
+                        
+                     }
+        
+                    img {
+                        width:50px;
+                                              
+        
+                        @include media-breakpoint-up(sm) {
+                            width: 80px;
+                            margin-bottom: 2.5rem;
+                        }
+                    }
     
-                a {
-                        text-decoration: none;
-                        // font-weight: 700;
-                        color: $color-main;
+                    h3 {
+                        color: #000;
+                        font-weight: 700;
+                        margin-bottom: 1.5rem;
+                    }
+        
+                    a {
+                            text-decoration: none;
+                            // font-weight: 700;
+                            color: $color-main;
+        
+                            // &:hover{
+                            //     text-decoration: underline;
+                            // }
+                            img{
+                                width: 2rem;
+                                margin-right: 1rem;
+                            }  
+        
+                    }
     
-                        // &:hover{
-                        //     text-decoration: underline;
-                        // }
-                        img{
-                            width: 2rem;
-                            margin-right: 1rem;
-                        }  
-    
+                    
+        
+        
+        
                 }
 
                 
-    
-    
-    
+                
             }
-        }
+
+
     
     }
 }
