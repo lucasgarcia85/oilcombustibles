@@ -17,6 +17,7 @@ footer {
 
             @include media-breakpoint-up(md) {
                 width: 45%;
+            }
 
                 .tel{
 
@@ -25,8 +26,13 @@ footer {
                         color: $color-main;
 
                     }
+                    a{
+                        text-decoration: none;
+                        &:hover {
+                            color:$color-green;
+                        }                   
+                    }
                 }
-            }
                       
             // .datos_oficina_redes {
             //     font-size: 2rem;
@@ -53,8 +59,17 @@ footer {
         .col_imagen {
             padding: 2rem 0;
             width: 100%;
+            text-align: center;
             @include media-breakpoint-up(lg) {
                 width: 60%;
+            }
+
+            img{
+                width: 80%;
+
+                @include media-breakpoint-up(lg) {
+                width: 100%;
+            }
             }
         }
     }

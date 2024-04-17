@@ -287,10 +287,11 @@
                     @include media-breakpoint-up(sm) {
                         width: 50%;
                         
-                     }
+                    }
         
                     img {
-                        width:50px;
+                        width:55px;
+                        margin-top: 2rem;
                                               
         
                         @include media-breakpoint-up(sm) {
@@ -302,7 +303,7 @@
                     h3 {
                         color: #000;
                         font-weight: 700;
-                        margin-bottom: 1.5rem;
+                        margin: 1rem 0;
                     }
         
                     a {
