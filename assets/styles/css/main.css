@@ -12629,12 +12629,12 @@ footer .footer_datos .datos_oficina {
     color: #0170C1;
   }
 }
-footer .footer_datos .datos_map {
+footer .footer_datos .col_imagen {
   padding: 2rem 0;
   width: 100%;
 }
 @media (min-width: 992px) {
-  footer .footer_datos .datos_map {
+  footer .footer_datos .col_imagen {
     width: 60%;
   }
 }
@@ -12732,6 +12732,9 @@ footer .back-to-top i {
   transition: all 0.3s ease;
 }
 
+header {
+  background-color: #fff;
+}
 @media (max-width: 991.98px) {
   header {
     position: fixed;
@@ -12740,7 +12743,6 @@ footer .back-to-top i {
   }
 }
 header.sticky {
-  background-color: #0170C1;
   transition: all 2s;
   position: fixed;
   z-index: 999;
@@ -12853,7 +12855,7 @@ header .navbar-brand img {
 }
 
 .consulta-bar {
-  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, #cdd3d9 50%, #bdc1c4 100%);
+  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, #cdd3d9 50%, rgba(189, 193, 196, 0.2196078431) 100%);
 }
 .consulta-bar > .container {
   display: none;
@@ -13054,6 +13056,7 @@ header .navbar-brand img {
   margin-top: 4rem;
 }
 .estaciones .container .estacion {
+  background-color: rgba(205, 211, 217, 0.1921568627);
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -13064,6 +13067,12 @@ header .navbar-brand img {
   .estaciones .container .estacion {
     flex-direction: row;
   }
+}
+.estaciones .container .estacion:nth-child(1) {
+  border-radius: 60px 0px;
+}
+.estaciones .container .estacion:nth-child(3) {
+  border-radius: 0px 60px;
 }
 .estaciones .container .estacion .estacion_ubicacion {
   width: 100%;
