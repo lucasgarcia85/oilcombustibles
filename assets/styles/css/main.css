@@ -12611,13 +12611,19 @@ footer .footer_contenedor {
   flex-flow: column nowrap;
   gap: 40px;
   height: 250px;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../images/estaciondapsahorqueta.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)), url("../../images/estaciondapsahorqueta.png");
   background-size: cover;
   background-position: 50% 70%;
   background-attachment: fixed;
+  padding-top: 1.5rem;
 }
 footer .footer_contenedor img {
-  height: 50%;
+  height: 40%;
+}
+@media (min-width: 992px) {
+  footer .footer_contenedor img {
+    height: 50%;
+  }
 }
 footer .footer_contenedor .footer_datos {
   margin-left: 3rem;
