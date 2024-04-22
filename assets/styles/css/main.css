@@ -12518,7 +12518,7 @@ section h2:after, section .h2:after {
   position: absolute;
   left: 2%; /* Centra el borde en el 80% del ancho */
   bottom: 0;
-  width: 80%; /* Ancho del borde */
+  width: 100%; /* Ancho del borde */
   height: 2px; /* Grosor del borde */
   background-color: #00AF50;
 }
@@ -12527,10 +12527,9 @@ section h2:before, section .h2:before {
   position: absolute;
   left: 0%; /* Centra el borde en el 80% del ancho */
   bottom: 0;
-  width: 20%; /* Ancho de los primeros 50px */
+  width: 30%; /* Ancho de los primeros 50px */
   height: 4px; /* Grosor de los primeros 50px */
   background-color: #0170C1; /* Color de los primeros 50px */
-  animation: moveLeftToRight 2s infinite;
   z-index: 1;
 }
 @media (min-width: 576px) {
@@ -12629,17 +12628,6 @@ h3, .h3 {
     opacity: 1;
   }
 }
-@keyframes moveLeftToRight {
-  0% {
-    left: -1%;
-  }
-  50% {
-    left: 1%;
-  }
-  100% {
-    left: -1%;
-  }
-}
 footer {
   position: relative;
 }
@@ -12649,19 +12637,24 @@ footer .footer_contenedor {
   align-items: center;
   flex-flow: column nowrap;
   gap: 40px;
-  height: 250px;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)), url("../../images/estaciondapsahorqueta.png");
+  height: 310px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.348), rgba(211, 211, 211, 0.78)), url("../../images/estaciondapsahorqueta.png");
   background-size: cover;
   background-position: 50% 70%;
   background-attachment: fixed;
   padding-top: 1.5rem;
+}
+@media (min-width: 992px) {
+  footer .footer_contenedor {
+    height: 350px;
+  }
 }
 footer .footer_contenedor img {
   height: 40%;
 }
 @media (min-width: 992px) {
   footer .footer_contenedor img {
-    height: 50%;
+    height: 60%;
   }
 }
 footer .footer_contenedor .footer_datos {
@@ -12672,7 +12665,7 @@ footer .footer_contenedor .footer_datos address {
 }
 footer .footer_contenedor .footer_datos address i {
   padding-right: 1rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #0170C1;
 }
 footer .footer_contenedor .footer_datos .info {
@@ -12681,7 +12674,7 @@ footer .footer_contenedor .footer_datos .info {
 }
 footer .footer_contenedor .footer_datos .info i {
   padding-right: 1rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #00AF50;
 }
 footer .footer_contenedor .footer_datos .info a {
@@ -12983,7 +12976,6 @@ header .navbar-brand img {
   flex-direction: column;
   max-width: 90%;
   transform: translateY(-2rem);
-  text-shadow: 3px 4px 2px rgba(0, 0, 0, 0.59);
   color: rgb(255, 255, 255);
 }
 @media (min-width: 992px) {
@@ -13155,15 +13147,17 @@ header .navbar-brand img {
   .estaciones .container .estacion .estacion_info {
     width: 35%;
     align-items: start;
+    text-align: left;
     padding-left: 3rem;
   }
 }
-.estaciones .container .estacion .estacion_info img {
+.estaciones .container .estacion .estacion_info > img {
   width: 55px;
   margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 @media (min-width: 576px) {
-  .estaciones .container .estacion .estacion_info img {
+  .estaciones .container .estacion .estacion_info > img {
     width: 80px;
     margin-bottom: 2.5rem;
   }
