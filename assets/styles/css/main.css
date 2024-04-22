@@ -12509,6 +12509,35 @@ strong {
 section {
   padding: 2rem 0;
 }
+section h2, section .h2 {
+  padding-bottom: 5px;
+  position: relative;
+}
+section h2:after, section .h2:after {
+  content: "";
+  position: absolute;
+  left: 2%; /* Centra el borde en el 80% del ancho */
+  bottom: 0;
+  width: 80%; /* Ancho del borde */
+  height: 2px; /* Grosor del borde */
+  background-color: #00AF50;
+}
+section h2:before, section .h2:before {
+  content: "";
+  position: absolute;
+  left: 0%; /* Centra el borde en el 80% del ancho */
+  bottom: 0;
+  width: 20%; /* Ancho de los primeros 50px */
+  height: 4px; /* Grosor de los primeros 50px */
+  background-color: #0170C1; /* Color de los primeros 50px */
+  animation: moveLeftToRight 2s infinite;
+  z-index: 1;
+}
+@media (min-width: 576px) {
+  section h2:before, section .h2:before {
+    width: 390px;
+  }
+}
 
 sup {
   top: -0.3em;
@@ -12518,7 +12547,7 @@ h1, .h1,
 h2,
 .h2 {
   line-height: 1.25;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.05rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -12533,7 +12562,6 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  text-align: center;
   font-size: 3rem;
 }
 @media (min-width: 768px) {
@@ -12599,6 +12627,17 @@ h3, .h3 {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
+  }
+}
+@keyframes moveLeftToRight {
+  0% {
+    left: -1%;
+  }
+  50% {
+    left: 1%;
+  }
+  100% {
+    left: -1%;
   }
 }
 footer {
@@ -12751,14 +12790,21 @@ header.sticky .navbar-brand img {
 @media (min-width: 992px) {
   header.sticky .navbar-brand img {
     width: 70px;
+    padding: 0.5rem 0;
   }
+}
+header.sticky .consulta-bar {
+  height: 0px;
+}
+header.sticky .navbar-brand img {
+  transform: translateY(0px);
 }
 header .navbar {
   background: rgb(255, 255, 255);
 }
 @media (min-width: 992px) {
   header .navbar {
-    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, #0170C1 50%, #24314f 100%);
+    background: linear-gradient(90deg, rgb(196, 229, 255) 0%, #0170C1 50%, #24314f 100%);
     padding: 0;
   }
 }
@@ -12807,13 +12853,16 @@ header .navbar .navbar-collapse {
     height: auto !important;
   }
 }
+header .navbar .navbar-collapse .nav-item {
+  text-transform: uppercase;
+}
 header .navbar .navbar-collapse .nav-item:not(:last-child) {
   margin-right: 1.8rem;
 }
 header .navbar .navbar-collapse .nav-item .nav-link {
   font-size: 1.7rem;
   color: #000000;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.1rem;
   font-weight: 500;
   position: relative;
 }
@@ -12840,14 +12889,14 @@ header .navbar .navbar-collapse .nav-item .nav-link:hover:after {
   }
 }
 header .navbar-brand img {
-  width: 75px;
+  width: 80px;
   height: auto;
   transition: all 0.3s ease;
 }
 @media (min-width: 576px) {
   header .navbar-brand img {
-    width: 85px;
-    transform: translateY(-14px);
+    width: 95px;
+    transform: translateY(-16px);
   }
 }
 
@@ -12876,7 +12925,7 @@ header .navbar-brand img {
 .consulta-bar .consultar-link {
   background-color: #00AF50;
   color: white;
-  padding: 2px 15px;
+  padding: 8px 15px;
   cursor: pointer;
   text-decoration: none;
 }
@@ -12974,8 +13023,13 @@ header .navbar-brand img {
   }
 }
 .swiper .swiper-slide--content .btn {
-  min-width: 330px;
+  min-width: 280px;
   margin-top: 2rem;
+}
+@media (min-width: 576px) {
+  .swiper .swiper-slide--content .btn {
+    min-width: 330px;
+  }
 }
 .swiper .swiper-slide.slide-01 {
   background-image: url("../../images/gulf.jpg");
@@ -12986,6 +13040,13 @@ header .navbar-brand img {
 
 .servicios {
   margin-top: 5rem;
+}
+.servicios .container h2, .servicios .container .h2 {
+  margin-bottom: 3rem;
+}
+.servicios .container h3, .servicios .container .h3 {
+  text-align: justify;
+  margin-top: 2rem;
 }
 .servicios .container .valores {
   margin-top: 6rem;
@@ -13045,52 +13106,56 @@ header .navbar-brand img {
   }
 }
 
-.estaciones {
+.estaciones .container {
   margin-top: 5rem;
 }
-.estaciones .container {
-  text-align: center;
-  margin-top: 4rem;
+.estaciones .container h2, .estaciones .container .h2 {
+  margin-bottom: 8rem;
 }
 .estaciones .container .estacion {
-  background-color: rgba(205, 211, 217, 0.1921568627);
+  background-color: rgba(137, 137, 137, 0.1137254902);
   display: flex;
   flex-direction: column;
   align-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   gap: 3rem;
+  padding: 3rem;
+  border-radius: 2rem;
 }
 @media (min-width: 576px) {
   .estaciones .container .estacion {
     flex-direction: row;
   }
 }
-.estaciones .container .estacion:nth-child(1) {
-  border-radius: 60px 0px;
-}
-.estaciones .container .estacion:nth-child(3) {
-  border-radius: 0px 60px;
-}
 .estaciones .container .estacion .estacion_ubicacion {
   width: 100%;
 }
 @media (min-width: 576px) {
   .estaciones .container .estacion .estacion_ubicacion {
-    width: 50%;
+    width: 65%;
   }
 }
 .estaciones .container .estacion .estacion_ubicacion iframe {
   width: 100%;
+  height: 300px;
+}
+@media (min-width: 576px) {
+  .estaciones .container .estacion .estacion_ubicacion iframe {
+    height: 100%;
+  }
 }
 .estaciones .container .estacion .estacion_info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 @media (min-width: 576px) {
   .estaciones .container .estacion .estacion_info {
-    width: 50%;
+    width: 35%;
+    align-items: start;
+    padding-left: 3rem;
   }
 }
 .estaciones .container .estacion .estacion_info img {

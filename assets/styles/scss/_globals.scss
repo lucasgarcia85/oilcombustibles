@@ -110,6 +110,38 @@ strong {
 section {
     padding: 2rem 0;
 
+    h2{
+       padding-bottom: 5px; 
+        position: relative;
+        
+    &:after {
+            content: "";
+            position: absolute;
+            left: 2%; /* Centra el borde en el 80% del ancho */
+            bottom: 0;
+            width: 80%; /* Ancho del borde */
+            height: 2px; /* Grosor del borde */
+            background-color: $color-green /* Color del borde */
+
+            }
+        
+    &:before {
+            content: "";
+            position: absolute;
+            left: 0%; /* Centra el borde en el 80% del ancho */
+            bottom: 0;
+            width: 20%; /* Ancho de los primeros 50px */
+            height: 4px; /* Grosor de los primeros 50px */
+            background-color: $color-main; /* Color de los primeros 50px */
+            animation: moveLeftToRight 2s infinite;
+            z-index: 1;
+
+            @include media-breakpoint-up(sm) {
+                width: 390px;
+            }
+         }
+    }
+
     
 }
 
@@ -121,7 +153,7 @@ sup {
 h1,
 h2 {
     line-height: 1.25;
-    letter-spacing: -.01em;
+    letter-spacing: 0.05rem;
     font-weight: 700;
     margin-bottom: 1rem;
     
@@ -135,7 +167,7 @@ h1 {
 }
 
 h2 {
-    text-align: center;
+    // text-align: center;
     font-size: 3rem;
     @include media-breakpoint-up(md) {
         font-size: 4.4rem;
@@ -203,6 +235,18 @@ h3{
       -webkit-transform: scale(1);
               transform: scale(1);
       opacity: 1;
+    }
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        left: -1%;
+    }
+    50% {
+        left: 1%;
+    }
+    100% {
+        left: -1%;
     }
 }
   

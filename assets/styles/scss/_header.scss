@@ -9,9 +9,7 @@ header {
     
     
     &.sticky {
-        // box-shadow: 0px 0px 6px #333;
-        // background: rgb(0, 0, 0, 92%);
-        // background-color: $color-main;
+       
         transition: all 2s;
         position: fixed;
         z-index: 999;
@@ -24,8 +22,17 @@ header {
 
                 @include media-breakpoint-up(lg){
                     width: 70px;
+                    padding: 0.5rem 0;
                 }
             }
+        }
+
+        .consulta-bar{
+            height: 0px;
+            
+        }
+        .navbar-brand img {
+            transform: translateY(0px);
         }
     }
 
@@ -36,7 +43,7 @@ header {
                         
         @include media-breakpoint-up(lg){
            
-            background: linear-gradient(90deg, rgb(255, 255, 255) 0%, $color-main 50%, $color-blue-dark 100%);
+            background: linear-gradient(90deg, rgb(196, 229, 255) 0%, $color-main 50%, $color-blue-dark 100%);
             padding: 0;
             
         }
@@ -97,13 +104,15 @@ header {
             }
 
             .nav-item {
+                text-transform: uppercase;
+                
                 &:not(:last-child) {
                     margin-right: 1.8rem;
                 }
                 .nav-link{
                     font-size: 1.7rem;
                     color:#000000;
-                    letter-spacing: -0.02em;
+                    letter-spacing: 0.1rem;
                     font-weight: 500;
                     position: relative;
                     @include media-breakpoint-up(lg){
@@ -139,14 +148,14 @@ header {
 
     .navbar-brand {
         img {
-            width: 75px;
+            width: 80px;
             height: auto;
             transition: all 0.3s ease;
             
 
             @include media-breakpoint-up(sm) {
-                width: 85px;
-                transform: translateY(-14px);
+                width: 95px;
+                transform: translateY(-16px);
             }
 
 
@@ -170,9 +179,9 @@ header {
             color: rgb(89, 89, 89);
             font-size: 1.5rem;
             gap: 2rem;
-            width: 100%;
-           
+            width: 100%;           
             text-align: center; 
+            
         }
 
     }
@@ -185,19 +194,13 @@ header {
     
     background-color: $color-green;
     color: white; 
-    padding: 2px 15px; 
+    padding: 8px 15px; 
     cursor: pointer; 
     text-decoration: none;
    
     }
 
 }
-
-// .hide{
-//     opacity: 0;
-//   max-height: 0;
-//   transition: opacity 0.3s, max-height 0.3s ease-out;
-// }
 
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon #S1{
