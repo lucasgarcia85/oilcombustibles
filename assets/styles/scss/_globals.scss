@@ -110,38 +110,30 @@ strong {
 section {
     padding: 2rem 0;
 
-    h2{
-       padding-bottom: 5px; 
+
+    h2 {
+        padding-bottom: 5px;
         position: relative;
-        
-    &:after {
+       
+        &::before {
             content: "";
             position: absolute;
-            left: 2%; /* Centra el borde en el 80% del ancho */
-            bottom: 0;
-            width: 100%; /* Ancho del borde */
-            height: 2px; /* Grosor del borde */
-            background-color: $color-green /* Color del borde */
-
-            }
-        
-    &:before {
-            content: "";
-            position: absolute;
-            left: 0%; /* Centra el borde en el 80% del ancho */
-            bottom: 0;
-            width: 30%; /* Ancho de los primeros 50px */
-            height: 4px; /* Grosor de los primeros 50px */
-            background-color: $color-main; /* Color de los primeros 50px */
-            // animation: moveLeftToRight 6s infinite;
-            z-index: 1;
-
-            @include media-breakpoint-up(sm) {
-                width: 390px;
-            }
-         }
+            left: 0; /* Alinea el borde con el inicio del texto */
+            bottom: 5px;
+            width: 100%; /* Extiende el borde hasta el 100% del ancho del contenedor */
+            height: 2px; /* Define el grosor del borde */
+            background-color: $color-green; /* Define el color del borde */
+            z-index: -1; /* Asegura que el borde esté detrás del texto */
+        }
     }
+    
+    span{
+        padding-bottom: 5px;
+        display: inline-block;
+        width: fit-content;
+        border-bottom: 3px solid $color-main;
 
+    }
     
 }
 
