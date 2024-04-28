@@ -33,9 +33,11 @@ footer {
             margin-left: 3rem;
            display: flex;
            flex-direction: column;
+           align-items: center;
 
            @include media-breakpoint-up(xl) {
             flex-direction: row;
+            align-items: start;
            }
 
             address {

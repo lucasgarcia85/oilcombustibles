@@ -12668,10 +12668,12 @@ footer .footer_contenedor .footer_datos {
   margin-left: 3rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 1200px) {
   footer .footer_contenedor .footer_datos {
     flex-direction: row;
+    align-items: start;
   }
 }
 footer .footer_contenedor .footer_datos address {
