@@ -15,7 +15,12 @@ body {
         overflow: hidden;
         
         &.header-sticky {
-            padding-top: 9rem;
+                       
+            padding-top: 0rem;
+            @include media-breakpoint-up(lg){
+                padding-top: 9rem;
+               
+            }
         }
     }
 }
@@ -244,6 +249,19 @@ h3{
     100% {
         top: 0
     }
+}
+
+@keyframes scaleit {
+    from {
+        scale: 1.0;
+    }
+    50%{
+        scale: 1.15;
+    }
+    to {
+        scale: 1.0;
+    }
+   
 }
   
   
