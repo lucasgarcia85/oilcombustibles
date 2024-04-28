@@ -12417,9 +12417,13 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   overflow-x: hidden;
+  color: #333;
 }
 body main {
   overflow: hidden;
+}
+body main.header-sticky {
+  padding-top: 9rem;
 }
 
 .btn {
@@ -12436,7 +12440,7 @@ body main {
   padding: 1rem 1.8rem;
   position: relative;
   font-weight: 600;
-  border-radius: 3px;
+  border-radius: 0;
   width: 10rem;
   overflow: hidden;
   min-width: 100px;
@@ -12524,10 +12528,11 @@ section h2::before, section .h2::before {
   z-index: -1; /* Asegura que el borde esté detrás del texto */
 }
 section span {
-  padding-bottom: 5px;
+  padding-bottom: 6px;
   display: inline-block;
   width: fit-content;
-  border-bottom: 3px solid #0170C1;
+  border-bottom: 4px solid #0170C1;
+  transform: translateY(1px);
 }
 
 sup {
@@ -12536,9 +12541,11 @@ sup {
 
 h1, .h1,
 h2,
-.h2 {
+.h2,
+h3,
+.h3 {
   line-height: 1.25;
-  letter-spacing: 0.05rem;
+  letter-spacing: -0.01rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -12620,6 +12627,14 @@ h3, .h3 {
     opacity: 1;
   }
 }
+@keyframes transitionHeader {
+  0% {
+    top: -9rem;
+  }
+  100% {
+    top: 0;
+  }
+}
 footer {
   position: relative;
 }
@@ -12630,7 +12645,7 @@ footer .footer_contenedor {
   flex-flow: column nowrap;
   gap: 40px;
   height: 310px;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.348), rgba(211, 211, 211, 0.78)), url("../../images/estaciondapsahorqueta.png");
+  background: linear-gradient(rgba(255, 255, 255, 0.348), rgba(255, 255, 255, 0.8)), url("../../images/estaciongulf.png");
   background-size: cover;
   background-position: 50% 70%;
   background-attachment: fixed;
@@ -12651,22 +12666,27 @@ footer .footer_contenedor img {
 }
 footer .footer_contenedor .footer_datos {
   margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1200px) {
+  footer .footer_contenedor .footer_datos {
+    flex-direction: row;
+  }
 }
 footer .footer_contenedor .footer_datos address {
-  display: inline-block;
-}
-footer .footer_contenedor .footer_datos address i {
-  padding-right: 1rem;
-  font-size: 3rem;
-  color: #0170C1;
+  margin: 0 3.5rem;
 }
 footer .footer_contenedor .footer_datos .info {
-  display: inline-block;
-  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+}
+footer .footer_contenedor .footer_datos .info--location i {
+  color: #0170C1 !important;
 }
 footer .footer_contenedor .footer_datos .info i {
   padding-right: 1rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #00AF50;
 }
 footer .footer_contenedor .footer_datos .info a {
@@ -12764,10 +12784,11 @@ header {
   }
 }
 header.sticky {
-  transition: all 2s;
+  animation: transitionHeader 0.8s;
   position: fixed;
   z-index: 999;
   width: 100%;
+  box-shadow: 0 0 5px 0 #555;
 }
 header.sticky .navbar-brand img {
   width: 62px;
@@ -12775,7 +12796,7 @@ header.sticky .navbar-brand img {
 @media (min-width: 992px) {
   header.sticky .navbar-brand img {
     width: 70px;
-    padding: 0.5rem 0;
+    padding: 0.7rem 0;
   }
 }
 header.sticky .consulta-bar {
@@ -12841,18 +12862,27 @@ header .navbar .navbar-collapse {
 header .navbar .navbar-collapse .nav-item {
   text-transform: uppercase;
 }
-header .navbar .navbar-collapse .nav-item:not(:last-child) {
-  margin-right: 1.8rem;
+@media (max-width: 1199.98px) {
+  header .navbar .navbar-collapse .nav-item {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  header .navbar .navbar-collapse .nav-item:not(:last-child) {
+    margin-right: 2.5rem;
+  }
 }
 header .navbar .navbar-collapse .nav-item .nav-link {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   color: #000000;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
   font-weight: 500;
   position: relative;
 }
 @media (min-width: 992px) {
   header .navbar .navbar-collapse .nav-item .nav-link {
+    font-size: 1.6rem;
     color: #ffffff;
   }
 }
@@ -12878,9 +12908,9 @@ header .navbar-brand img {
   height: auto;
   transition: all 0.3s ease;
 }
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   header .navbar-brand img {
-    width: 95px;
+    width: 105px;
     transform: translateY(-16px);
   }
 }
@@ -12913,6 +12943,14 @@ header .navbar-brand img {
   padding: 8px 15px;
   cursor: pointer;
   text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  line-height: 1.3;
+}
+.consulta-bar .consultar-link:hover {
+  background-color: #0170C1;
 }
 
 .navbar-toggler[aria-expanded=true] .navbar-toggler-icon #S1 {
@@ -12923,7 +12961,8 @@ header .navbar-brand img {
   transform: rotate(-45deg) translateY(-7px);
 }
 
-/*titulo_animado***********************/
+/*titulo_animado
+***********************/
 .swiper {
   width: 100%;
   height: auto;
@@ -12934,7 +12973,7 @@ header .navbar-brand img {
   }
 }
 .swiper .swiper-slide {
-  height: 450px;
+  height: 480px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12945,7 +12984,7 @@ header .navbar-brand img {
 }
 @media (min-width: 576px) {
   .swiper .swiper-slide {
-    height: 600px;
+    height: 550px;
     background-position: center;
   }
 }
@@ -12955,7 +12994,7 @@ header .navbar-brand img {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.65);
   z-index: 1;
 }
 .swiper .swiper-slide--content {
@@ -12966,7 +13005,7 @@ header .navbar-brand img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 90%;
+  max-width: 95%;
   transform: translateY(-2rem);
   color: rgb(255, 255, 255);
 }
@@ -12978,8 +13017,9 @@ header .navbar-brand img {
 }
 .swiper .swiper-slide--content h1, .swiper .swiper-slide--content .h1 {
   font-size: 4.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.1rem;
   text-align: center;
+  line-height: 1.1;
 }
 @media (min-width: 1200px) {
   .swiper .swiper-slide--content h1, .swiper .swiper-slide--content .h1 {
@@ -12987,7 +13027,7 @@ header .navbar-brand img {
   }
 }
 .swiper .swiper-slide--content h2, .swiper .swiper-slide--content .h2 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -12998,22 +13038,20 @@ header .navbar-brand img {
 }
 .swiper .swiper-slide--content h3, .swiper .swiper-slide--content .h3 {
   font-size: 2.2rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   text-align: center;
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 @media (min-width: 1200px) {
   .swiper .swiper-slide--content h3, .swiper .swiper-slide--content .h3 {
-    font-size: 3.3rem;
+    margin: 2rem 0 1rem;
+    font-size: 3rem;
   }
 }
 .swiper .swiper-slide--content .btn {
-  min-width: 280px;
+  min-width: 260px;
   margin-top: 2rem;
-}
-@media (min-width: 576px) {
-  .swiper .swiper-slide--content .btn {
-    min-width: 330px;
-  }
 }
 .swiper .swiper-slide.slide-01 {
   background-image: url("../../images/gulf.jpg");
@@ -13023,17 +13061,29 @@ header .navbar-brand img {
 }
 
 .servicios {
-  margin-top: 5rem;
-}
-.servicios .container h2, .servicios .container .h2 {
-  margin-bottom: 3rem;
-}
-.servicios .container h3, .servicios .container .h3 {
-  text-align: justify;
   margin-top: 2rem;
 }
+@media (min-width: 1200px) {
+  .servicios {
+    margin-top: 5rem;
+  }
+}
+.servicios .container h2, .servicios .container .h2 {
+  margin-bottom: 2rem;
+}
+.servicios .container p {
+  text-align: left;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 1200px) {
+  .servicios .container p {
+    font-size: 2.4rem;
+  }
+}
 .servicios .container .valores {
-  margin-top: 6rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -13041,7 +13091,8 @@ header .navbar-brand img {
 }
 @media (min-width: 992px) {
   .servicios .container .valores {
-    gap: 3.5rem;
+    margin-top: 5rem;
+    gap: 3rem;
     flex-direction: row;
   }
 }
@@ -13056,7 +13107,6 @@ header .navbar-brand img {
   padding: 3rem;
   text-align: center;
   line-height: 1.3;
-  height: 22rem;
   opacity: 0.9;
 }
 @media (min-width: 992px) {
@@ -13074,40 +13124,48 @@ header .navbar-brand img {
   background-color: #00AF50;
 }
 .servicios .container .valores div p {
-  font-size: 2.1rem;
+  font-size: 2rem;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .servicios .container .valores div p {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 }
 .servicios .container .valores div img {
   height: 60px;
+  width: auto;
 }
 @media (min-width: 768px) {
   .servicios .container .valores div img {
-    height: 70px;
+    height: 80px;
   }
 }
 
 .estaciones .container {
-  margin-top: 5rem;
+  margin-top: 2rem;
+}
+@media (min-width: 992px) {
+  .estaciones .container {
+    margin-top: 5rem;
+  }
 }
 .estaciones .container h2, .estaciones .container .h2 {
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 }
 .estaciones .container .estacion {
-  background-color: rgba(137, 137, 137, 0.1137254902);
+  background-color: #f0f6ff;
   display: flex;
   flex-direction: column;
   align-content: center;
   margin-bottom: 4rem;
   gap: 3rem;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 2rem;
 }
 @media (min-width: 576px) {
   .estaciones .container .estacion {
+    padding: 2.5rem;
     flex-direction: row;
   }
 }
@@ -13140,13 +13198,13 @@ header .navbar-brand img {
     width: 35%;
     align-items: start;
     text-align: left;
-    padding-left: 3rem;
+    padding-left: 1rem;
   }
 }
 .estaciones .container .estacion .estacion_info > img {
   width: 55px;
   margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 @media (min-width: 576px) {
   .estaciones .container .estacion .estacion_info > img {
@@ -13157,15 +13215,16 @@ header .navbar-brand img {
 .estaciones .container .estacion .estacion_info h3, .estaciones .container .estacion .estacion_info .h3 {
   color: #000;
   font-weight: 700;
-  margin: 1rem 0;
+  font-size: 2.6rem;
 }
 .estaciones .container .estacion .estacion_info a {
-  text-decoration: none;
   color: #0170C1;
+  display: block;
+  margin-top: 1.5rem;
 }
 .estaciones .container .estacion .estacion_info a img {
   width: 2rem;
-  margin-right: 1rem;
+  margin-right: 1.2rem;
 }
 
 /*THANK YOU

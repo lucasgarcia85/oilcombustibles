@@ -8,7 +8,7 @@ footer {
         flex-flow: column nowrap;
         gap: 40px;
         height: 310px;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.348),rgba(211, 211, 211, 0.78)), url("../../images/estaciondapsahorqueta.png") ;
+        background: linear-gradient(rgba(255, 255, 255, 0.348),rgba(255, 255, 255, 0.8)), url("../../images/estaciongulf.png");
         background-size: cover;
         background-position: 50% 70%;
         background-attachment: fixed;
@@ -28,38 +28,40 @@ footer {
 
 
         }
+
         .footer_datos{
             margin-left: 3rem;
-           
+           display: flex;
+           flex-direction: column;
 
-            address{
-                display: inline-block;
+           @include media-breakpoint-up(xl) {
+            flex-direction: row;
+           }
 
-                i{
-                    padding-right: 1rem;
-                    font-size: 3rem;
-                    color: $color-main;
-                }
-
+            address {
+                margin: 0 3.5rem;
             }
 
             
-            .info{
-                display: inline-block;
-                margin-right: 2rem;
-                
+            .info {
+                display: flex;
+                align-items: center;
+
+                &--location {
+                    i {
+                        color: $color-main !important;
+                    }
+                }
 
                               
                 i{
                     padding-right: 1rem;
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                     color: $color-green;
-
                 }
                
 
-                
-                a{
+                a {
                     text-decoration: none;
                     color: black;
                     &:hover {

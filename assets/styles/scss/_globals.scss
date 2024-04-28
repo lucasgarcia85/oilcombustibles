@@ -7,11 +7,16 @@ body {
     font-family: $font-family-main;
     font-size: 1.6rem;
     line-height: 1.5;
-    
     overflow-x: hidden;
+    color: $color-font-main;
 
+    
     main{
         overflow: hidden;
+        
+        &.header-sticky {
+            padding-top: 9rem;
+        }
     }
 }
 
@@ -20,7 +25,7 @@ body {
     border: none;
     text-decoration: none;
     transition: all 0.3s ease;
-    margin:auto;
+    margin: auto;
     font-size: 1.6rem;
     text-transform: uppercase;
     display: flex;
@@ -29,7 +34,7 @@ body {
     padding: 1rem 1.8rem;
     position: relative;
     font-weight: 600;
-    border-radius: 3px;
+    border-radius: 0;
     width: 10rem;
     overflow: hidden;
     min-width: 100px;
@@ -128,11 +133,11 @@ section {
     }
     
     span{
-        padding-bottom: 5px;
+        padding-bottom: 6px;
         display: inline-block;
         width: fit-content;
-        border-bottom: 3px solid $color-main;
-
+        border-bottom: 4px solid $color-main;
+        transform: translateY(1px);
     }
     
 }
@@ -143,9 +148,10 @@ sup {
 
 
 h1,
-h2 {
+h2,
+h3 {
     line-height: 1.25;
-    letter-spacing: 0.05rem;
+    letter-spacing: -0.01rem;
     font-weight: 700;
     margin-bottom: 1rem;
     
@@ -230,17 +236,15 @@ h3{
     }
 }
 
-// @keyframes moveLeftToRight {
-//     0% {
-//         left: -1%;
-//     }
-//     50% {
-//         left: 1%;
-//     }
-//     100% {
-//         left: -1%;
-//     }
-// }
+@keyframes transitionHeader {
+    0% {
+        top: -9rem
+    }
+
+    100% {
+        top: 0
+    }
+}
   
   
   

@@ -2,7 +2,9 @@
 *****************************************************/
 window.addEventListener('scroll', function () {
   var header = document.querySelector('header');
+  var main = document.querySelector('main');
   header.classList.toggle("sticky", window.scrollY > 0);
+  main.classList.toggle("header-sticky", window.scrollY > 0);
 });
 
 
