@@ -8,21 +8,8 @@ window.addEventListener('scroll', function () {
 });
 
 
-/*consulta bar js para que desaparezca al scrolear
-*****************************************************/
-// window.addEventListener('scroll', function() {
-//   var header = document.querySelector('header');
-//   var consultaBar = document.querySelector('.consulta-bar');
-  
-//   if (header.classList.contains('sticky')) {
-//       consultaBar.classList.add('hide');
-     
-//   } else {
-//       consultaBar.classList.remove('hide');
-//   }
-// });
-
-// Swiper config
+/*Swiper
+*************************************/
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
